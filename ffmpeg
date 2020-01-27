@@ -1,0 +1,12 @@
+
+Cmd den ffmpegi çağırıyoruz---
+C:\Users\CS>cd C:\ffmpeg
+C:\ffmpeg>cd bin
+
+Birleştirmek istediğimiz iki video için bu kodu 1.dosya ve 2.dosya yerine birleştirmek istediğiniz videoların bilgisayarda bulundugu konum gelecek
+sekılde dolduruyoruz
+Örn:C:\ffmpeg\bin\SampleVideo_1280x720_1mb.mp4
+sondaki output.m4 alacagımız cıktının ismi oluyor
+
+(echo file '1.dosya.mp4' & echo file 'C:\ffmpeg\bin\small.mp4' & echo file '2.dosya.mp4')>list.txt
+ffmpeg -safe 0 -f concat -i list.txt -c copy output.mp4
